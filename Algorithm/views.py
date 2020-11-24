@@ -11,9 +11,11 @@ def arrayValues():
 
 
 def index(request):
-    global arr
-    arr = arrayValues()
-    return render(request, "index.html", {'arr': arr})
+    #if request.method == "POST":
+        #arr = request.POST['a_size']
+        global arr
+        arr = arrayValues()
+        return render(request, "index.html", {'arr': arr})
 
 
 def mergesort(request):
